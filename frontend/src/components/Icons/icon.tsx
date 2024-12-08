@@ -25,7 +25,6 @@ const Icon: React.FC<IconProps> = ({
         style={{
           ...imgStyles,
           backgroundColor: bgColor,
-          // color: bgColor === "white" ? "black" : "white",
         }}
         alt="Icon"
       />

@@ -1,5 +1,5 @@
 import React from "react";
-import downArrowIc from "assets/icons/down-arrow.svg";
+import ArrowDownIcon from "components/Icons/ArrowDownIcon";
 
 interface DropdownButtonProps<ItemT> {
   items?: ItemT[];
@@ -33,7 +33,7 @@ export const DropdownButton = <T,>({
     >
       <div className="flex items-center space-x-2 " style={styles}>
         {title && <span>{title}</span>}
-        {arrow && <img src={downArrowIc} width={20} alt="arrow" />}
+        {arrow && <ArrowDownIcon size={20} />}
       </div>
       <div
         className={`${openDropdown} border px-2 absolute right-0 w-[180px] bg-cyan-500 shadow-lg shadow-cyan-500/50 z-50`}

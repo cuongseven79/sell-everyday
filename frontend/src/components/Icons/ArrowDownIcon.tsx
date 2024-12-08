@@ -3,7 +3,7 @@ import React from "react";
 type BackgroundColor = "red" | "yellow";
 type FillType = "yellow"| "red"|  "green"|  "blue"|  "purple"|  "pink"|  "gray" | "white"|  "transparent";
 
-interface SearchIconProps {
+interface ArrowDownIconProps {
   size?: number;
   styles?: React.CSSProperties;
   prefixCls?: string;
@@ -11,7 +11,7 @@ interface SearchIconProps {
   fill?: FillType;
 }
 
-const SearchIcon: React.FC<SearchIconProps> = ({
+const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
   size = 16,
   styles = {},
   prefixCls = "",
@@ -34,6 +34,7 @@ const SearchIcon: React.FC<SearchIconProps> = ({
         width={16}
         height= {16}
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
         id="down-arrow"
       >
         <path
@@ -44,7 +45,7 @@ const SearchIcon: React.FC<SearchIconProps> = ({
           height: "100%",
           backgroundColor: "red",
         }}
-          d="m15.7 13.3-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+          d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
         ></path>
       </svg>
       
@@ -54,6 +55,4 @@ const SearchIcon: React.FC<SearchIconProps> = ({
   );
 };
 
-export default SearchIcon;
-
-
+export default ArrowDownIcon;

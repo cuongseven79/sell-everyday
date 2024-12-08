@@ -73,9 +73,9 @@ export const DropdownSearch = <T,>({
       </div>
       <button
         type="submit"
-        className={`${searchBgColor} p-3 flex items-center justify-center`}
+        className={`${searchBgColor} flex items-center justify-center`}
       >
-        <SearchIcon />
+      <SearchIcon size={30}/>
       </button>
     </form>
   );
