@@ -13,7 +13,7 @@ const HeaderTop: React.FC = () => {
   }
 
   return (
-    <div className="h-9 flex justify-between items-center text-[12px] px-5">
+    <div className="h-9 flex justify-between items-center text-[12px] px-5 bg-[#ffd200]" >
       <div className="flex space-x-7">
         <p className="text-[12px]">Welcome to Sell Everyday</p>
         <div className="uppercase space-x-2">
@@ -21,7 +21,7 @@ const HeaderTop: React.FC = () => {
           <Link to="/sign-up">Create an account</Link>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex h-full">
         <DropdownButton
           arrow
           items={locates}

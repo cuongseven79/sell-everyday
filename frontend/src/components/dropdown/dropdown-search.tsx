@@ -10,7 +10,7 @@ interface DropdownSearchProps<ItemT> {
   selectCls?: string;
   inputCls?: string;
   textSize?: number;
-  searchBgColor?: string;
+  searchBtnCls?: string;
 }
 
 export const DropdownSearch = <T,>({
@@ -20,7 +20,7 @@ export const DropdownSearch = <T,>({
   selectCls = "",
   inputCls = "",
   textSize = 13,
-  searchBgColor = "",
+  searchBtnCls = "",
   onSubmitForm,
   optionDefault = "",
 }: DropdownSearchProps<T>) => {
@@ -44,9 +44,9 @@ export const DropdownSearch = <T,>({
     <form
       ref={formRef}
       onSubmit={handleSubmitForm}
-      className={`${prefixCls} flex rounded-md overflow-hidden`}
+      className={`${prefixCls} flex rounded-md overflow-hidden h-full`}
     >
-      <div className="text-black flex justify-center items-center border border-l">
+      <div className="text-black flex justify-center items-center border">
         <select
           name=""
           id=""
@@ -67,15 +67,15 @@ export const DropdownSearch = <T,>({
         <input
           type="text"
           placeholder="Search anything..."
-          className={`${inputCls}text-black h-full w-full p-2.5 outline-none text-[${textSize}px]`}
+          className={`${inputCls} text-black h-full w-full outline-none text-[${textSize}px]`}
           ref={inputRef}
         />
       </div>
       <button
         type="submit"
-        className={`${searchBgColor} flex items-center justify-center`}
+        className={`${searchBtnCls} flex items-center justify-center h-full`}
       >
-      <SearchIcon size={30}/>
+        <SearchIcon size={70} prefixCls={`${searchBtnCls}`}/>
       </button>
     </form>
   );

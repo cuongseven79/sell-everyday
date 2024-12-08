@@ -36,7 +36,7 @@ export const DropdownButton = <T,>({
         {arrow && <ArrowDownIcon size={20} />}
       </div>
       <div
-        className={`${openDropdown} border px-2 absolute right-0 w-[180px] bg-cyan-500 shadow-lg shadow-cyan-500/50 z-50`}
+        className={`${openDropdown} border px-2 absolute top-9 right-4 w-[170px] bg-[#8f8c7c] shadow-lg shadow-[#ffd200]-500/50 z-50 rounded-b-xl`}
       >
         {items && items.length > 0 ? (
           items.map((item, index) => (
