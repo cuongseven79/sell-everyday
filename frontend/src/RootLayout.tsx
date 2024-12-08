@@ -14,7 +14,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <BrowserRouter>
       <header>
         <HeaderTop />
-        {/* <HeaderMiddle /> */}
+        <HeaderMiddle />
         {/* <HeaderBottom /> */}
       </header>
       <BodyLayout children={children} />
