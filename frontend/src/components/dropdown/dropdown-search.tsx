@@ -75,7 +75,7 @@ export const DropdownSearch = <T,>({
         type="submit"
         className={`${searchBtnCls} flex items-center justify-center h-full`}
       >
-        <SearchIcon size={70} prefixCls={`${searchBtnCls}`}/>
+        <SearchIcon size={70} prefixCls={`${searchBtnCls}`} />
       </button>
     </form>
   );

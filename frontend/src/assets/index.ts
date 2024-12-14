@@ -1,3 +1,4 @@
+/*=== SVG ===*/
 import argentSVG from "assets/icons/argentina.svg";
 import vietnamSVG from "assets/icons/vietnam.svg";
 import usaSVG from "assets/icons/united-states.svg";

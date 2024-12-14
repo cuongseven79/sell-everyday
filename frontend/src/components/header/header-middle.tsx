@@ -1,15 +1,20 @@
 import { DropdownSearch } from "components/dropdown/dropdown-search";
 import { equipments } from "assets";
-import CartIcon from "components/Icons/CartIcon";
-import BadgeNumber from "components/badge/BadgeNumber";
-import PopupCart from "components/PopupCart";
+import Cart from "components/Cart";
+import React from "react";
+import { Link } from "react-router";
+import { getCart, removeCart, setCart } from "constants/sessionStorage.const";
+import { products as dummy } from "constants/cart.data";
 
 const HeaderMiddle = () => {
+  const products = getCart("cart");
+  const [openPopup, setOpenPopup] = React.useState<boolean>(false);
+
   return (
     <div className="bg-[#292931] flex justify-between items-center py-8 px-3">
-      <div className="">
+      <Link to={"/"} className="">
         <span className="text-[25px] text-white">SELL EVERYDAY</span>
-      </div>
+      </Link>
       <div className=" w-1/2 h-[50px]">
         <DropdownSearch
           items={equipments}
@@ -21,22 +26,19 @@ const HeaderMiddle = () => {
           textSize={15}
         />
       </div>
-      <div className="relative bg-white h-full rounded-[5px] flex justify-center items-center ">
-        <div className="flex px-5 py-3.5 border-r border-r-[#ddd] relative">
-          <CartIcon size={21} />
-          <BadgeNumber
-            badgeContent={2}
-            badgeSize={20}
-            textSize={13}
-            prefixCls="absolute right-[-10px]"
-          />
-        </div>
-        <div className="">
-          <span className="text-[#292931] px-5 text-sm">
-            My Cart: $1,530.00
-          </span>
-        </div>
-      </div>
+
+      <button className="py-5 bg-white" onClick={() => setCart("cart", dummy)}>
+        ADD
+      </button>
+      <button className="py-5 bg-white" onClick={() => removeCart("cart")}>
+        REMOVE{" "}
+      </button>
+
+      <Cart
+        products={products}
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      />
     </div>
   );
 };
