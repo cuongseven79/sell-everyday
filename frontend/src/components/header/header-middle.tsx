@@ -11,7 +11,7 @@ const HeaderMiddle = () => {
   const [openPopup, setOpenPopup] = React.useState<boolean>(false);
 
   return (
-    <div className="bg-[#292931] flex justify-between items-center py-8 px-3">
+    <div className="bg-[#292931] flex justify-between items-center pt-8 px-3">
       <Link to={"/"} className="">
         <span className="text-[25px] text-white">SELL EVERYDAY</span>
       </Link>
@@ -27,12 +27,12 @@ const HeaderMiddle = () => {
         />
       </div>
 
-      <button className="py-5 bg-white" onClick={() => setCart("cart", dummy)}>
+      {/* <button className="py-5 bg-white" onClick={() => setCart("cart", dummy)}>
         ADD
       </button>
       <button className="py-5 bg-white" onClick={() => removeCart("cart")}>
-        REMOVE{" "}
-      </button>
+        REMOVE
+      </button> */}
 
       <Cart
         products={products}

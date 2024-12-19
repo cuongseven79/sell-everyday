@@ -12,14 +12,15 @@ type FillType =
   | "white"
   | "transparent";
 
-interface ArrowDownIconProps {
+interface ArrowRightIconProps {
   size?: number;
   styles?: React.CSSProperties;
   prefixCls?: string;
   bgColor?: BackgroundColor;
   fill?: FillType;
 }
-const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
+
+const ArrowRightIcon: React.FC<ArrowRightIconProps> = ({
   size = 16,
   styles = {},
   prefixCls = "",
@@ -45,7 +46,7 @@ const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
         height={16}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="down-arrow"
+        id="right-arrow"
       >
         <path
           fillRule="evenodd"
@@ -55,11 +56,11 @@ const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
             height: "100%",
             backgroundColor: "red",
           }}
-          d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+          d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"
         ></path>
       </svg>
     </span>
   );
 };
 
-export default ArrowDownIcon;
+export default ArrowRightIcon;

@@ -1,9 +1,10 @@
 import React from "react";
-import BodyLayout from "components/bodylayout";
+import BodyLayout from "components/BodyLayout";
 import HeaderTop from "components/header/header-top";
 import HeaderMiddle from "components/header/header-middle";
-import HeaderBottom from "components/header/header-bottom";
+
 import { BrowserRouter } from "react-router";
+import { HeaderBottom } from "components/header/header-bottom";
 
 interface RootLayoutProps {
   children?: React.ReactNode;
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <header>
         <HeaderTop />
         <HeaderMiddle />
-        {/* <HeaderBottom /> */}
+        <HeaderBottom />
       </header>
       <BodyLayout children={children} />
       <footer>{/* <h1>THIS IS FOOTER</h1> */}</footer>

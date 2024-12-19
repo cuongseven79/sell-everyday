@@ -12,14 +12,15 @@ type FillType =
   | "white"
   | "transparent";
 
-interface ArrowDownIconProps {
+interface HamburgerIconProps {
   size?: number;
   styles?: React.CSSProperties;
   prefixCls?: string;
   bgColor?: BackgroundColor;
   fill?: FillType;
 }
-const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
+
+const HamburgerIcon: React.FC<HamburgerIconProps> = ({
   size = 16,
   styles = {},
   prefixCls = "",
@@ -38,28 +39,25 @@ const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({
       <svg
         style={{
           ...styles,
-          fontSize: size,
         }}
         className="text-center flex justify-center items-center"
-        width={16}
-        height={16}
+        width={size}
+        height={size}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="down-arrow"
+        id="hamburger-icon"
       >
         <path
-          fillRule="evenodd"
           style={{
             fill: fill,
             width: "100%",
             height: "100%",
-            backgroundColor: "red",
           }}
-          d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+          d="M20,11H4c-0.6,0-1,0.4-1,1s0.4,1,1,1h16c0.6,0,1-0.4,1-1S20.6,11,20,11z M4,8h16c0.6,0,1-0.4,1-1s-0.4-1-1-1H4C3.4,6,3,6.4,3,7S3.4,8,4,8z M20,16H4c-0.6,0-1,0.4-1,1s0.4,1,1,1h16c0.6,0,1-0.4,1-1S20.6,16,20,16z"
         ></path>
       </svg>
     </span>
   );
 };
 
-export default ArrowDownIcon;
+export default HamburgerIcon;

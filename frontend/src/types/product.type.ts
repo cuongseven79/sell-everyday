@@ -18,11 +18,19 @@ export interface Product {
   product_status?: string;
 }
 
+type CategoryType = {
+  id: string;
+  name: string;
+  products: Product[];
+  status?: string;
+};
 export interface Category {
   category_id?: string;
   category_name?: string;
-  category_description?: string;
-  category_date_added?: string;
-  category_date_updated?: string;
-  category_status?: string;
+  category_types?: CategoryType[];
+
+  // category_description?: string;
+  // category_date_added?: string;
+  // category_date_updated?: string;
+  // category_status?: string;
 }
