@@ -46,7 +46,7 @@ const DropdownMegaMenu = <T,>({
 
   return (
     <div
-      className={`relative ${className} w-fit h-full flex items-center`}
+      className={`relative ${className} w-fit h-full flex items-center `}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
@@ -70,19 +70,19 @@ const DropdownMegaMenu = <T,>({
         className={`${openDropdown} absolute top-10 right-0  w-full shadow-sm rounded-md z-50`}
       >
         <div className="mt-4 shadow-md">
-          {menu && menu.length > 0 
-          ? ( menu.map((menuItem, index) => (
+          {menu && menu.length > 0 ? (
+            menu.map((menuItem, index) => (
               <div
                 key={index}
                 onMouseEnter={() => handleMenuItem(menuItem)}
-                className={`${prefixItemCls} bg-white hover:bg-[#ffd00079] border cursor-pointer h-10 w-full flex items-center justify-center text-sm`}
+                className={`${prefixItemCls} bg-white hover:bg-[#F7F7F7] border cursor-pointer h-10 w-full flex items-center justify-center text-sm`}
               >
                 <div className="flex justify-between items-center w-full h-full px-2 cursor-pointer">
                   {renderMenu(menuItem)}
                 </div>
               </div>
-            ))) 
-        : (
+            ))
+          ) : (
             <div
               className={`${prefixItemCls} bg-white hover:bg-zinc-200 p-5 border cursor-pointer h-10 w-full flex items-center text-sm`}
             >
@@ -90,9 +90,11 @@ const DropdownMegaMenu = <T,>({
             </div>
           )}
         </div>
-          <div className={`mt-4 absolute top-0 left-full grid grid-flow-col grid-rows-2 w-max gap-5 p-5`}>
+        <div
+          className={`mt-4 absolute top-0 left-full grid grid-flow-col grid-rows-2 w-max gap-5 p-5`}
+        >
           {menuItemSelected && renderSubMenu(menuItemSelected)}
-          </div>
+        </div>
       </div>
     </div>
   );

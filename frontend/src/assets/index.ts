@@ -3,6 +3,13 @@ import argentSVG from "assets/icons/argentina.svg";
 import vietnamSVG from "assets/icons/vietnam.svg";
 import usaSVG from "assets/icons/united-states.svg";
 
+/*=== IMAGES ===*/
+import banner1 from "assets/images/banner/banner-1.jpg";
+import banner2 from "assets/images/banner/banner-2.jpg";
+import banner3 from "assets/images/banner/banner-3.jpg";
+
+export const banners = [banner1, banner2, banner3];
+
 export const locates = [
   { country: "Vietnam", currency: "VND", flagURL: vietnamSVG, url: "/vi" },
   { country: "Argentina", currency: "PESO", flagURL: argentSVG, url: "/ar" },

@@ -1,12 +1,13 @@
-import PopupConfirm from "components/popup/PopupConfirm";
+import { lazy, Suspense } from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import RootLayout from "RootLayout";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <RootLayout></RootLayout>
-    </div>
+    <BrowserRouter basename="/">
+      <RootLayout />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

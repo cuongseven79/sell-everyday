@@ -4,7 +4,10 @@
 
 html,
 body {
-  font-family: "Open sans", sans-serif;
+  /* font-family: "Open sans", sans-serif; */
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*== Hidden arrow up - down on <input> tag == */

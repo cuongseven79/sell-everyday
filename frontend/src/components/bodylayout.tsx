@@ -1,3 +1,4 @@
+import Homepage from "pages/homepage/Homepage";
 import React from "react";
 
 interface LayoutProps {
@@ -5,7 +6,12 @@ interface LayoutProps {
 }
 
 const BodyLayout: React.FC<LayoutProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <div>
+      {children}
+      {/* <Homepage /> */}
+    </div>
+  );
 };
 
 export default BodyLayout;

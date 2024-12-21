@@ -23,29 +23,20 @@ const DropdownContent = <ItemT,>({
 }: DropdownContentProps<ItemT>) => {
   console.log("menu => ", menu);
   const [open, setOpen] = React.useState(false);
+
+  if (!menu) return null;
   return (
     <Fragment>
-      {
-        menu && menu.length > 0
-          ? menu.map((menuItem, index) => (
-              <div
-                key={index}
-                // onClick={() => onSelected && onSelected(menuItem)}
-                // className={`${prefixItemCls} bg-white hover:bg-zinc-200 border cursor-pointer h-10 w-full flex items-center justify-center text-sm`}
-                className={`${prefixItemCls}`}
-              >
-                {renderMenu(menuItem)}
-              </div>
-            ))
-          : null
-        //  (
-        //   <div
-        //     className={`${prefixItemCls} bg-white hover:bg-zinc-200 p-5 border cursor-pointer h-10 w-full flex items-center text-sm`}
-        //   >
-        //     <span>No found item in list</span>
-        //   </div>
-        // )
-      }
+      {menu.map((menuItem, index) => (
+        <div
+          key={index}
+          // onClick={() => onSelected && onSelected(menuItem)}
+          // className={`${prefixItemCls} bg-white hover:bg-zinc-200 border cursor-pointer h-10 w-full flex items-center justify-center text-sm`}
+          className={`${prefixItemCls}`}
+        >
+          {renderMenu(menuItem)}
+        </div>
+      ))}
     </Fragment>
   );
 };
